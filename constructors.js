@@ -115,9 +115,9 @@ function Employee(name, email, hireDate) {
   }
   User.prototype.addSavedPost = function(id, title, rating){
     const post = {
-      id,
-      title,
-      rating
+      id: id,
+      title: title,
+      rating: rating
     }
     this.savedPosts.push(post)
   }
@@ -140,5 +140,9 @@ function Employee(name, email, hireDate) {
   // You will continue to use the constructor function you created in problem 5.
   // Write a prototype method for the User constructor function named changePostRating that will take in two number parameters. The first will be an id (a number) and the second will be the new rating (a number). Use the id to find the matching object in the savedPosts array. Once you find the matching object, update it's rating score with the new rating parameter.
   
-  User.prototype.changePostRating = function(num1, num2)
+  User.prototype.changePostRating = function(id, newRating){
+    let post = this.savedPosts.find(element => element.id === id)
+    post.rating = newRating;
+    return post
+  }
   
