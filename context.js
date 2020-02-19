@@ -19,7 +19,13 @@
 */
   
 
-//Code Here
+const user = {
+  username: 'username',
+  email: 'email',
+  getUsername: function(){
+    return this.username
+  }
+}
 
 
 
