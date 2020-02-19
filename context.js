@@ -47,7 +47,7 @@ class Animal {
   }
 }
 
-//Code Here
+animal1 = new Animal('Dale', 'Squirrel', 'nuts')
 
 
 
@@ -67,7 +67,7 @@ let who = {
   location: 'Belize'
 }
 
-//Code Here
+const whoSaysHi = sayHi.bind(who)
 
 
 
